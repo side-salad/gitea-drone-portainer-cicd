@@ -38,7 +38,7 @@ This pipeline was built to improve the existing deployment workflow under the fo
 3. A Docker image is built and tagged using the Drone build number
 4. The image is pushed to a private registry
 5. A Portainer webhook redeploys the stack using the new image
-![Workflow Diagram](documentation/Screenshot 2025-07-30 111430.png)
+![Workflow Diagram](documentation/Screenshot\ 2025-07-30 111430.png)
 
 ## Known Limitations and Challenges
 - The pipeline was most effective for single-image services  
