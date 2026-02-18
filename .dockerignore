@@ -1,0 +1,4 @@
+.venv/
+drone_runner_env/
+drone_server_env/
+.drone.yml

@@ -1,0 +1,25 @@
+kind: pipeline
+type: docker
+name: build-push-deploy
+
+steps:
+  - name: build
+    image: plugins/docker
+    settings:
+      registry: registry.test:5000
+      repo: registry.test:5000/dronetest
+      tags:
+        - latest
+        - ${DRONE_BUILD_NUMBER}
+      username:
+        from_secret: registry_username
+      password:
+        from_secret: registry_password
+
+  - name: deploy
+    image: curlimages/curl
+    commands:
+      - curl -X POST url
+    when:
+      branch:
+        - main
